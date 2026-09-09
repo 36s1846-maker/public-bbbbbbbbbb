@@ -14,24 +14,20 @@
 
   <style>
     :root {
-      --bg: #fff4f8;
+      --bg: #f5f7fb;
       --card: #ffffff;
-      --text: #4a3040;
-      --muted: #9a7889;
-      --line: #f4dce7;
-
-      --primary: #ff7fa8;
-      --primary-dark: #f15f91;
-      --primary-soft: #ffe8f0;
-
-      --success: #65b895;
-      --warning: #d99a4e;
-      --danger: #e56b75;
-
-      --bar-bg: #f8e8ee;
-
-      --radius: 22px;
-      --shadow: 0 10px 30px rgba(226, 113, 153, 0.10);
+      --text: #172033;
+      --muted: #657086;
+      --line: #e3e7ef;
+      --primary: #315efb;
+      --primary-dark: #244bd0;
+      --primary-soft: #edf1ff;
+      --success: #16845b;
+      --warning: #a86600;
+      --danger: #c0392b;
+      --bar-bg: #e9edf4;
+      --radius: 18px;
+      --shadow: 0 8px 28px rgba(28, 42, 70, 0.07);
     }
 
     * {
@@ -44,10 +40,7 @@
 
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at 10% 5%, #ffe3ee 0, transparent 22%),
-        radial-gradient(circle at 90% 10%, #ffeaf3 0, transparent 20%),
-        var(--bg);
+      background: var(--bg);
       color: var(--text);
       font-family:
         -apple-system,
@@ -75,25 +68,19 @@
       padding: 24px 0 56px;
     }
 
-    /* ==============================
-       상단 소개
-    ============================== */
-
     .hero {
       padding: 30px 4px 24px;
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 12px;
-      padding: 7px 14px;
-      border: 1px solid #ffc9dc;
+      margin-bottom: 10px;
+      padding: 5px 10px;
       border-radius: 999px;
-      background: #ffe6f0;
-      color: #e65c8b;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
       font-size: 0.82rem;
-      font-weight: 800;
-      box-shadow: 0 4px 12px rgba(255, 127, 168, 0.10);
+      font-weight: 700;
     }
 
     h1,
@@ -105,7 +92,6 @@
 
     h1 {
       margin-bottom: 8px;
-      color: #4b3040;
       font-size: clamp(1.9rem, 7vw, 3rem);
       line-height: 1.15;
       letter-spacing: -0.04em;
@@ -118,14 +104,10 @@
       font-size: 1rem;
     }
 
-    /* ==============================
-       일반 카드
-    ============================== */
-
     .section {
       margin-top: 18px;
       padding: 22px;
-      background: rgba(255, 255, 255, 0.94);
+      background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -133,14 +115,9 @@
 
     .section h2 {
       margin-bottom: 14px;
-      color: #5a3548;
       font-size: 1.18rem;
       letter-spacing: -0.02em;
     }
-
-    /* ==============================
-       정보 카드
-    ============================== */
 
     .info-grid {
       display: grid;
@@ -150,37 +127,24 @@
 
     .info-item {
       min-width: 0;
-      padding: 15px;
-      border: 1px solid #f3dce6;
-      border-radius: 16px;
-      background: #fff9fb;
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-    }
-
-    .info-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 7px 18px rgba(226, 113, 153, 0.08);
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fafbfe;
     }
 
     .info-label {
       display: block;
       margin-bottom: 4px;
-      color: #b08498;
+      color: var(--muted);
       font-size: 0.82rem;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .info-value {
       overflow-wrap: anywhere;
-      color: #583c4b;
       font-size: 0.96rem;
     }
-
-    /* ==============================
-       모델 상태
-    ============================== */
 
     .model-status {
       display: flex;
@@ -193,12 +157,11 @@
     }
 
     .status-dot {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       flex: 0 0 auto;
       border-radius: 50%;
-      background: #d5c2cb;
-      box-shadow: 0 0 0 4px #fdf1f5;
+      background: #aeb6c5;
     }
 
     .status-dot.loading {
@@ -213,39 +176,18 @@
       background: var(--danger);
     }
 
-    /* ==============================
-       모델 체험 영역
-    ============================== */
-
+    /* 모델 체험 영역을 가장 눈에 띄게 구성 */
     .experience {
-      position: relative;
       margin-top: 24px;
       padding: 22px;
-      border: 2px solid #ffcddd;
-      border-radius: 25px;
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff 0%,
-          #fff9fb 100%
-        );
-      box-shadow:
-        0 14px 40px rgba(255, 127, 168, 0.13);
-    }
-
-    .experience::before {
-      content: "♡";
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      color: #ffb4cc;
-      font-size: 28px;
-      line-height: 1;
+      border: 2px solid #dbe3ff;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 38px rgba(49, 94, 251, 0.1);
     }
 
     .experience-title {
       margin-bottom: 5px;
-      color: #553344;
       font-size: 1.45rem;
       letter-spacing: -0.03em;
     }
@@ -256,10 +198,6 @@
       font-size: 0.92rem;
     }
 
-    /* ==============================
-       버튼
-    ============================== */
-
     .method-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -269,83 +207,48 @@
 
     .button {
       min-height: 48px;
-      padding: 11px 18px;
+      padding: 11px 17px;
       border: 1px solid transparent;
-      border-radius: 14px;
-      font-weight: 800;
-      transition:
-        transform 0.15s ease,
-        background 0.15s ease,
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
-    }
-
-    .button:hover:not(:disabled) {
-      transform: translateY(-2px);
-    }
-
-    .button:active:not(:disabled) {
-      transform: translateY(0);
+      border-radius: 12px;
+      font-weight: 700;
+      transition: background 0.15s ease, border-color 0.15s ease;
     }
 
     .button:focus-visible,
     input:focus-visible {
-      outline: 3px solid rgba(255, 127, 168, 0.25);
+      outline: 3px solid rgba(49, 94, 251, 0.25);
       outline-offset: 2px;
     }
 
     .button-primary {
-      background:
-        linear-gradient(
-          135deg,
-          #ff8fb4,
-          #ff6f9e
-        );
+      background: var(--primary);
       color: #fff;
-      box-shadow:
-        0 7px 16px rgba(255, 111, 158, 0.20);
     }
 
     .button-primary:hover:not(:disabled) {
-      background:
-        linear-gradient(
-          135deg,
-          #ff7fa8,
-          #f45f91
-        );
-      box-shadow:
-        0 9px 20px rgba(255, 111, 158, 0.27);
+      background: var(--primary-dark);
     }
 
     .button-secondary {
       background: #fff;
-      border-color: #f0d6e1;
-      color: #71485b;
+      border-color: var(--line);
+      color: var(--text);
     }
 
     .button-secondary:hover:not(:disabled) {
-      background: #fff4f8;
-      border-color: #ffc5d8;
+      background: #f5f7fb;
     }
 
     .button-danger {
-      background: #fff3f4;
-      border-color: #f3c5ca;
-      color: #d15c66;
-    }
-
-    .button-danger:hover:not(:disabled) {
-      background: #ffe7e9;
+      background: #fff4f3;
+      border-color: #f2c6c2;
+      color: var(--danger);
     }
 
     .button:disabled {
       cursor: not-allowed;
       opacity: 0.45;
     }
-
-    /* ==============================
-       입력 패널
-    ============================== */
 
     .method-panel {
       display: none;
@@ -362,14 +265,9 @@
       justify-content: center;
       padding: 14px;
       overflow: hidden;
-      border: 1px solid #f0dce5;
-      border-radius: 18px;
-      background:
-        linear-gradient(
-          145deg,
-          #fff8fb,
-          #fff2f7
-        );
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #f7f8fb;
     }
 
     #webcam-container canvas,
@@ -380,15 +278,9 @@
       height: auto;
       max-height: 500px;
       object-fit: contain;
-      border-radius: 15px;
-      background: #2d2027;
-      box-shadow:
-        0 8px 22px rgba(77, 39, 55, 0.14);
+      border-radius: 12px;
+      background: #111;
     }
-
-    /* ==============================
-       음성 입력
-    ============================== */
 
     #audio-visual {
       width: 100%;
@@ -403,26 +295,15 @@
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background:
-        linear-gradient(
-          145deg,
-          #ffe3ee,
-          #ffd2e2
-        );
-      color: #f26898;
-      font-size: 1.15rem;
-      font-weight: 900;
-      box-shadow:
-        0 8px 20px rgba(255, 127, 168, 0.16);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 2rem;
+      font-weight: 800;
     }
 
     .audio-state {
       color: var(--muted);
     }
-
-    /* ==============================
-       사진 업로드
-    ============================== */
 
     .upload-area {
       width: 100%;
@@ -434,28 +315,16 @@
       align-items: center;
       justify-content: center;
       min-height: 52px;
-      padding: 12px 20px;
-      border-radius: 14px;
-      background:
-        linear-gradient(
-          135deg,
-          #ff8fb4,
-          #ff6f9e
-        );
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: var(--primary);
       color: #fff;
-      font-weight: 800;
+      font-weight: 700;
       cursor: pointer;
-      box-shadow:
-        0 7px 16px rgba(255, 111, 158, 0.18);
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
     }
 
     .upload-label:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 9px 20px rgba(255, 111, 158, 0.25);
+      background: var(--primary-dark);
     }
 
     #image-file {
@@ -472,9 +341,7 @@
       width: min(100%, 520px);
       max-height: 500px;
       object-fit: contain;
-      border-radius: 15px;
-      box-shadow:
-        0 8px 22px rgba(77, 39, 55, 0.12);
+      border-radius: 12px;
     }
 
     .file-name {
@@ -484,10 +351,6 @@
       overflow-wrap: anywhere;
     }
 
-    /* ==============================
-       조작 버튼
-    ============================== */
-
     .control-row {
       display: flex;
       flex-wrap: wrap;
@@ -495,28 +358,20 @@
       margin-top: 13px;
     }
 
-    /* ==============================
-       오류
-    ============================== */
-
     .error-message {
       display: none;
       margin-top: 12px;
       padding: 12px 14px;
-      border: 1px solid #f1c6ce;
-      border-radius: 14px;
-      background: #fff2f4;
-      color: #a94450;
+      border: 1px solid #efc6c2;
+      border-radius: 12px;
+      background: #fff6f5;
+      color: #8d2f25;
       font-size: 0.9rem;
     }
 
     .error-message.show {
       display: block;
     }
-
-    /* ==============================
-       예측 결과
-    ============================== */
 
     .prediction-section {
       margin-top: 18px;
@@ -533,7 +388,6 @@
 
     .prediction-header h3 {
       margin: 0;
-      color: #633d50;
       font-size: 1.05rem;
     }
 
@@ -551,37 +405,28 @@
       justify-content: center;
       margin-bottom: 17px;
       padding: 14px;
-      border: 1px solid #ffd0df;
-      border-radius: 17px;
-      background:
-        linear-gradient(
-          135deg,
-          #ffe8f1,
-          #fff0f6
-        );
+      border-radius: 15px;
+      background: var(--primary-soft);
       text-align: center;
-      box-shadow:
-        0 5px 16px rgba(255, 127, 168, 0.08);
     }
 
     .top-prediction.empty {
-      background: #fff8fa;
+      background: #f6f7fa;
       color: var(--muted);
     }
 
     .top-label {
-      color: #d95787;
       font-size: 1.42rem;
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1.2;
       overflow-wrap: anywhere;
     }
 
     .top-probability {
       margin-left: 8px;
-      color: #ef6595;
+      color: var(--primary-dark);
       font-size: 1.05rem;
-      font-weight: 900;
+      font-weight: 800;
     }
 
     .prediction-list {
@@ -604,14 +449,13 @@
     .prediction-label {
       min-width: 0;
       overflow-wrap: anywhere;
-      color: #654555;
       font-size: 0.92rem;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .prediction-percent {
       flex: 0 0 auto;
-      color: #a68192;
+      color: var(--muted);
       font-size: 0.87rem;
       font-variant-numeric: tabular-nums;
     }
@@ -620,27 +464,16 @@
       height: 11px;
       overflow: hidden;
       border-radius: 999px;
-      background: #f8e8ee;
+      background: var(--bar-bg);
     }
 
     .bar-fill {
       height: 100%;
       width: 0;
       border-radius: inherit;
-      background:
-        linear-gradient(
-          90deg,
-          #ffabc5,
-          #ff6f9e
-        );
-      box-shadow:
-        0 2px 7px rgba(255, 111, 158, 0.18);
+      background: var(--primary);
       transition: width 0.18s ease;
     }
-
-    /* ==============================
-       클래스
-    ============================== */
 
     .class-list {
       display: flex;
@@ -650,37 +483,27 @@
 
     .class-chip {
       max-width: 100%;
-      padding: 7px 12px;
-      border: 1px solid #f2d5e1;
+      padding: 7px 11px;
+      border: 1px solid #dce2ec;
       border-radius: 999px;
-      background: #fff7fa;
-      color: #795064;
+      background: #f8f9fb;
       overflow-wrap: anywhere;
       font-size: 0.86rem;
     }
 
-    /* ==============================
-       안내문
-    ============================== */
-
     .notice {
       margin: 0;
       padding: 14px;
-      border: 1px solid #f6dcae;
-      border-radius: 14px;
-      background: #fff9ed;
-      color: #76551c;
+      border-radius: 13px;
+      background: #fff8e8;
+      color: #704a0b;
       font-size: 0.9rem;
     }
-
-    /* ==============================
-       푸터
-    ============================== */
 
     .footer {
       margin-top: 22px;
       padding: 8px 4px;
-      color: #aa8b9a;
+      color: var(--muted);
       text-align: center;
       font-size: 0.85rem;
     }
@@ -688,10 +511,6 @@
     .hidden {
       display: none !important;
     }
-
-    /* ==============================
-       모바일
-    ============================== */
 
     @media (max-width: 620px) {
       .page {
@@ -706,7 +525,7 @@
       .section,
       .experience {
         padding: 17px;
-        border-radius: 18px;
+        border-radius: 16px;
       }
 
       .info-grid {
@@ -734,12 +553,6 @@
       .prediction-note {
         text-align: left;
       }
-
-      .experience::before {
-        top: 12px;
-        right: 14px;
-        font-size: 23px;
-      }
     }
   </style>
 </head>
@@ -749,17 +562,15 @@
 
     <!-- 1. 프로젝트 소개 -->
     <header class="hero">
-      <span class="eyebrow">🌸 Teachable Machine 모델 체험</span>
-
+      <span class="eyebrow">Teachable Machine 모델 체험</span>
       <h1 id="project-name">프로젝트명</h1>
-
       <p class="hero-description" id="project-description">
         학교 안의 문제를 해결하기 위해 만든 분류 모델을 직접 시험해 보세요.
       </p>
     </header>
 
     <section class="section">
-      <h2>💗 프로젝트 정보</h2>
+      <h2>프로젝트 정보</h2>
 
       <div class="info-grid">
         <div class="info-item">
@@ -779,42 +590,32 @@
 
         <div class="info-item">
           <span class="info-label">모델 종류</span>
-          <div class="info-value" id="model-type">
-            모델 정보를 불러오는 중...
-          </div>
+          <div class="info-value" id="model-type">모델 정보를 불러오는 중...</div>
         </div>
       </div>
 
       <div class="model-status" aria-live="polite">
         <span id="status-dot" class="status-dot loading"></span>
-
-        <span id="model-status">
-          모델과 메타데이터를 불러오는 중입니다...
-        </span>
+        <span id="model-status">모델과 메타데이터를 불러오는 중입니다...</span>
       </div>
     </section>
 
     <!-- 3~5. 모델 체험 -->
     <section class="experience" id="experience">
-
-      <h2 class="experience-title">
-        🎀 모델 직접 시험하기
-      </h2>
-
+      <h2 class="experience-title">모델 직접 시험하기</h2>
       <p class="experience-description" id="experience-description">
         모델이 준비되면 입력 방법을 선택해 결과를 확인할 수 있습니다.
       </p>
 
       <!-- 이미지 모델의 입력 방법 -->
       <div id="image-method-buttons" class="method-buttons hidden">
-
         <button
           id="camera-mode-button"
           class="button button-primary"
           type="button"
           disabled
         >
-          📷 카메라로 시험
+          카메라로 시험
         </button>
 
         <button
@@ -823,44 +624,26 @@
           type="button"
           disabled
         >
-          🖼️ 사진으로 시험
+          사진으로 시험
         </button>
-
       </div>
 
       <!-- 카메라 입력 -->
       <div id="camera-panel" class="method-panel">
-
         <div class="input-area">
-
           <div id="webcam-container"></div>
-
-          <canvas
-            id="pose-canvas"
-            class="hidden"
-            width="400"
-            height="400"
-          ></canvas>
-
-          <video
-            id="webcam-video"
-            class="hidden"
-            autoplay
-            muted
-            playsinline
-          ></video>
-
+          <canvas id="pose-canvas" class="hidden" width="400" height="400"></canvas>
+          <video id="webcam-video" class="hidden" autoplay muted playsinline></video>
         </div>
 
         <div class="control-row">
-
           <button
             id="camera-start"
             class="button button-primary"
             type="button"
             disabled
           >
-            📷 카메라 시작
+            카메라 시작
           </button>
 
           <button
@@ -869,25 +652,17 @@
             type="button"
             disabled
           >
-            ⏹️ 카메라 중지
+            카메라 중지
           </button>
-
         </div>
-
       </div>
 
       <!-- 이미지 파일 입력 -->
       <div id="upload-panel" class="method-panel">
-
         <div class="input-area">
-
           <div class="upload-area">
-
-            <label
-              class="upload-label"
-              for="image-file"
-            >
-              🖼️ 사진 파일 선택
+            <label class="upload-label" for="image-file">
+              사진 파일 선택
             </label>
 
             <input
@@ -896,16 +671,8 @@
               accept="image/*"
             >
 
-            <div
-              id="upload-placeholder"
-              style="
-                margin-top:12px;
-                color:#9a7889;
-                font-size:.9rem;
-              "
-            >
-              사진은 서버로 전송하지 않고
-              이 브라우저에서만 처리됩니다. 💕
+            <div id="upload-placeholder" style="margin-top:12px;color:#657086;font-size:.9rem;">
+              사진은 서버로 전송하지 않고 이 브라우저에서만 처리됩니다.
             </div>
 
             <img
@@ -913,24 +680,18 @@
               alt="선택한 이미지 미리보기"
             >
 
-            <div
-              id="file-name"
-              class="file-name"
-            ></div>
-
+            <div id="file-name" class="file-name"></div>
           </div>
-
         </div>
 
         <div class="control-row">
-
           <button
             id="upload-predict"
             class="button button-primary"
             type="button"
             disabled
           >
-            ✨ 이 사진 분류하기
+            이 사진 분류하기
           </button>
 
           <button
@@ -939,44 +700,30 @@
             type="button"
             disabled
           >
-            🗑️ 사진 지우기
+            사진 지우기
           </button>
-
         </div>
-
       </div>
 
       <!-- 음성 입력 -->
       <div id="audio-panel" class="method-panel">
-
         <div class="input-area">
-
           <div id="audio-visual">
-
-            <div class="audio-icon">
-              🎤
-            </div>
-
-            <div
-              id="audio-state"
-              class="audio-state"
-            >
+            <div class="audio-icon">MIC</div>
+            <div id="audio-state" class="audio-state">
               시작 버튼을 누르면 마이크 권한을 요청합니다.
             </div>
-
           </div>
-
         </div>
 
         <div class="control-row">
-
           <button
             id="audio-start"
             class="button button-primary"
             type="button"
             disabled
           >
-            🎤 마이크 시작
+            마이크 시작
           </button>
 
           <button
@@ -985,35 +732,25 @@
             type="button"
             disabled
           >
-            ⏹️ 마이크 중지
+            마이크 중지
           </button>
-
         </div>
-
       </div>
 
       <!-- 포즈 입력 -->
       <div id="pose-panel" class="method-panel">
-
         <div class="input-area">
-
-          <canvas
-            id="pose-canvas-main"
-            width="400"
-            height="400"
-          ></canvas>
-
+          <canvas id="pose-canvas-main" width="400" height="400"></canvas>
         </div>
 
         <div class="control-row">
-
           <button
             id="pose-start"
             class="button button-primary"
             type="button"
             disabled
           >
-            📷 카메라 시작
+            카메라 시작
           </button>
 
           <button
@@ -1022,148 +759,81 @@
             type="button"
             disabled
           >
-            ⏹️ 카메라 중지
+            카메라 중지
           </button>
-
         </div>
-
       </div>
 
-      <div
-        id="input-error"
-        class="error-message"
-        role="alert"
-      ></div>
+      <div id="input-error" class="error-message" role="alert"></div>
 
       <!-- 모든 입력 방법에서 같은 결과 영역 사용 -->
       <div class="prediction-section">
-
         <div class="prediction-header">
-
-          <h3>💖 예측 결과</h3>
-
+          <h3>예측 결과</h3>
           <p class="prediction-note">
             모든 클래스의 확률을 표시합니다.
           </p>
-
         </div>
 
-        <div
-          id="top-prediction"
-          class="top-prediction empty"
-        >
+        <div id="top-prediction" class="top-prediction empty">
           아직 예측 결과가 없습니다.
         </div>
 
-        <div
-          id="prediction-list"
-          class="prediction-list"
-        ></div>
-
+        <div id="prediction-list" class="prediction-list"></div>
       </div>
-
     </section>
 
     <!-- 2. 실제 클래스 -->
     <section class="section">
-
-      <h2>🌷 모델이 구분하는 클래스</h2>
-
-      <div
-        id="class-list"
-        class="class-list"
-      >
-        <span class="class-chip">
-          모델 메타데이터를 불러오는 중...
-        </span>
+      <h2>모델이 구분하는 클래스</h2>
+      <div id="class-list" class="class-list">
+        <span class="class-chip">모델 메타데이터를 불러오는 중...</span>
       </div>
-
     </section>
 
     <!-- 6. 한계와 사람의 확인 -->
     <section class="section">
-
-      <h2>📝 모델의 한계와 사람의 확인</h2>
+      <h2>모델의 한계와 사람의 확인</h2>
 
       <div class="info-grid">
-
         <div class="info-item">
-
-          <span class="info-label">
-            모델의 한계
-          </span>
-
-          <div class="info-value">
-            입력되지 않음
-          </div>
-
+          <span class="info-label">모델의 한계</span>
+          <div class="info-value">입력되지 않음</div>
         </div>
 
         <div class="info-item">
-
-          <span class="info-label">
-            사람이 확인해야 할 부분
-          </span>
-
-          <div class="info-value">
-            입력되지 않음
-          </div>
-
+          <span class="info-label">사람이 확인해야 할 부분</span>
+          <div class="info-value">입력되지 않음</div>
         </div>
-
       </div>
 
-      <p
-        class="notice"
-        style="margin-top:14px;"
-      >
+      <p class="notice" style="margin-top:14px;">
         가장 높은 확률의 결과가 항상 정답이라는 뜻은 아닙니다.
         조명, 배경, 촬영 각도, 입력 품질 등 학습할 때 보지 못한 조건에서는
         모델이 잘못 분류할 수 있으므로 중요한 판단은 사람이 다시 확인해야 합니다.
       </p>
-
     </section>
 
     <!-- 7. 팀 -->
     <section class="section">
-
-      <h2>👩‍❤️‍👨 만든 팀</h2>
+      <h2>만든 팀</h2>
 
       <div class="info-grid">
-
         <div class="info-item">
-
-          <span class="info-label">
-            팀명
-          </span>
-
-          <div class="info-value">
-            입력되지 않음
-          </div>
-
+          <span class="info-label">팀명</span>
+          <div class="info-value">입력되지 않음</div>
         </div>
 
         <div class="info-item">
-
-          <span class="info-label">
-            팀원
-          </span>
-
-          <div class="info-value">
-            입력되지 않음
-          </div>
-
+          <span class="info-label">팀원</span>
+          <div class="info-value">입력되지 않음</div>
         </div>
-
       </div>
-
     </section>
 
     <footer class="footer">
-      💕 이 페이지의 이미지 입력은 브라우저 안에서 처리되며
-      업로드한 사진을 서버에 저장하거나 전송하지 않습니다.
+      이 페이지의 이미지 입력은 브라우저 안에서 처리되며 업로드한 사진을 서버에 저장하거나 전송하지 않습니다.
     </footer>
-
   </main>
 
   <script>
@@ -1319,6 +989,13 @@
     }
 
     function detectModelType(metadata) {
+      /*
+        Teachable Machine의 metadata에는 packageName이 들어갑니다.
+        예:
+        @teachablemachine/image
+        @teachablemachine/pose
+        오디오 모델은 speech-commands 계열 메타데이터를 사용합니다.
+      */
 
       const packageName =
         String(metadata.packageName || "").toLowerCase();
@@ -1366,22 +1043,15 @@
 
     async function loadModel() {
       setButtonsDisabled(true);
-      setStatus(
-        "모델과 메타데이터를 불러오는 중입니다...",
-        "loading"
-      );
+      setStatus("모델과 메타데이터를 불러오는 중입니다...", "loading");
 
       try {
+        // 먼저 메타데이터를 읽어 실제 클래스 이름과 모델 종류를 확인
+        const metadata = await fetchModelMetadata();
 
-        const metadata =
-          await fetchModelMetadata();
-
-        classNames =
-          Array.isArray(metadata.labels)
-            ? metadata.labels.map(
-                (label) => String(label)
-              )
-            : [];
+        classNames = Array.isArray(metadata.labels)
+          ? metadata.labels.map((label) => String(label))
+          : [];
 
         if (classNames.length === 0) {
           throw new Error(
@@ -1389,11 +1059,8 @@
           );
         }
 
-        modelType =
-          detectModelType(metadata);
-
-        maxPredictions =
-          classNames.length;
+        modelType = detectModelType(metadata);
+        maxPredictions = classNames.length;
 
         renderModelInformation(metadata);
 
@@ -1402,54 +1069,36 @@
           "loading"
         );
 
-        if (
-          modelType === MODEL_TYPES.IMAGE
-        ) {
+        /*
+          모델 종류에 맞는 공식 라이브러리로 실제 모델을 로드합니다.
+        */
 
-          model =
-            await tmImage.load(
-              MODEL_URL + "model.json",
-              MODEL_URL + "metadata.json"
-            );
-
-        } else if (
-          modelType === MODEL_TYPES.POSE
-        ) {
-
-          model =
-            await tmPose.load(
-              MODEL_URL + "model.json",
-              MODEL_URL + "metadata.json"
-            );
-
-        } else if (
-          modelType === MODEL_TYPES.AUDIO
-        ) {
-
-          audioRecognizer =
-            speechCommands.create(
-              "BROWSER_FFT",
-              undefined,
-              MODEL_URL + "model.json",
-              MODEL_URL + "metadata.json"
-            );
+        if (modelType === MODEL_TYPES.IMAGE) {
+          model = await tmImage.load(
+            MODEL_URL + "model.json",
+            MODEL_URL + "metadata.json"
+          );
+        } else if (modelType === MODEL_TYPES.POSE) {
+          model = await tmPose.load(
+            MODEL_URL + "model.json",
+            MODEL_URL + "metadata.json"
+          );
+        } else if (modelType === MODEL_TYPES.AUDIO) {
+          audioRecognizer = speechCommands.create(
+            "BROWSER_FFT",
+            undefined,
+            MODEL_URL + "model.json",
+            MODEL_URL + "metadata.json"
+          );
 
           await audioRecognizer.ensureModelLoaded();
 
-          const audioLabels =
-            audioRecognizer.wordLabels();
+          // 오디오 모델의 실제 클래스 이름을 라이브러리에서도 확인
+          const audioLabels = audioRecognizer.wordLabels();
 
-          if (
-            Array.isArray(audioLabels) &&
-            audioLabels.length > 0
-          ) {
-            classNames =
-              audioLabels.map(
-                (label) => String(label)
-              );
-
-            maxPredictions =
-              classNames.length;
+          if (Array.isArray(audioLabels) && audioLabels.length > 0) {
+            classNames = audioLabels.map((label) => String(label));
+            maxPredictions = classNames.length;
           }
         }
 
@@ -1464,10 +1113,10 @@
 
         setButtonsDisabled(false);
 
+        // 모델이 로드되었지만 장치는 자동으로 실행하지 않습니다.
         stopAllInputs();
 
       } catch (error) {
-
         console.error(error);
 
         setStatus(
@@ -1485,59 +1134,43 @@
     }
 
     function renderModelInformation(metadata) {
-
       const packageName =
-        String(metadata.packageName || "")
-          .toLowerCase();
+        String(metadata.packageName || "").toLowerCase();
 
-      let typeText =
-        "확인되지 않음";
+      let typeText = "확인되지 않음";
 
-      if (
-        modelType === MODEL_TYPES.IMAGE
-      ) {
+      if (modelType === MODEL_TYPES.IMAGE) {
         typeText = "이미지 분류";
-      } else if (
-        modelType === MODEL_TYPES.AUDIO
-      ) {
+      } else if (modelType === MODEL_TYPES.AUDIO) {
         typeText = "음성 분류";
-      } else if (
-        modelType === MODEL_TYPES.POSE
-      ) {
+      } else if (modelType === MODEL_TYPES.POSE) {
         typeText = "포즈 분류";
       }
 
-      modelTypeElement.textContent =
-        typeText;
+      modelTypeElement.textContent = typeText;
 
+      // 프로젝트명은 사용자가 제공하지 않았으므로 모델명도 프로젝트명으로 임의 사용하지 않습니다.
       if (
         metadata.modelName &&
         metadata.modelName !== "tm-my-image-model"
       ) {
-        $("#project-name").textContent =
-          "프로젝트";
+        $("#project-name").textContent = "프로젝트";
       }
 
-      const description =
-        $("#project-description");
+      const description = $("#project-description");
 
-      if (
-        modelType === MODEL_TYPES.IMAGE
-      ) {
+      if (modelType === MODEL_TYPES.IMAGE) {
         description.textContent =
           "이미지 입력을 카메라 또는 사진 파일로 시험해 보세요.";
-      } else if (
-        modelType === MODEL_TYPES.AUDIO
-      ) {
+      } else if (modelType === MODEL_TYPES.AUDIO) {
         description.textContent =
           "마이크의 실시간 음성 입력을 이용해 모델의 분류 결과를 확인해 보세요.";
-      } else if (
-        modelType === MODEL_TYPES.POSE
-      ) {
+      } else if (modelType === MODEL_TYPES.POSE) {
         description.textContent =
           "카메라 앞에서 자세를 취하고 모델의 분류 결과를 확인해 보세요.";
       }
 
+      // packageName은 내부 확인용으로만 사용합니다.
       void packageName;
     }
 
@@ -1548,24 +1181,14 @@
     */
 
     function renderClassList() {
-
       classList.innerHTML = "";
 
-      classNames.forEach(
-        (className) => {
-
-          const chip =
-            document.createElement("span");
-
-          chip.className =
-            "class-chip";
-
-          chip.textContent =
-            className;
-
-          classList.appendChild(chip);
-        }
-      );
+      classNames.forEach((className) => {
+        const chip = document.createElement("span");
+        chip.className = "class-chip";
+        chip.textContent = className;
+        classList.appendChild(chip);
+      });
     }
 
     /*
@@ -1575,188 +1198,110 @@
     */
 
     function renderPredictionPlaceholders() {
-
       predictionList.innerHTML = "";
 
-      classNames.forEach(
-        (className, index) => {
+      classNames.forEach((className, index) => {
+        const row = document.createElement("div");
+        row.className = "prediction-row";
 
-          const row =
-            document.createElement("div");
+        row.innerHTML = `
+          <div class="prediction-meta">
+            <span class="prediction-label"></span>
+            <span class="prediction-percent">0%</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill"></div>
+          </div>
+        `;
 
-          row.className =
-            "prediction-row";
+        row.querySelector(".prediction-label").textContent =
+          className;
 
-          row.innerHTML = `
-            <div class="prediction-meta">
-              <span class="prediction-label"></span>
-              <span class="prediction-percent">0%</span>
-            </div>
+        row.dataset.index = String(index);
 
-            <div class="bar">
-              <div class="bar-fill"></div>
-            </div>
-          `;
-
-          row.querySelector(
-            ".prediction-label"
-          ).textContent =
-            className;
-
-          row.dataset.index =
-            String(index);
-
-          predictionList.appendChild(
-            row
-          );
-        }
-      );
+        predictionList.appendChild(row);
+      });
     }
 
     function renderPredictions(predictions) {
-
-      if (
-        !Array.isArray(predictions) ||
-        predictions.length === 0
-      ) {
+      if (!Array.isArray(predictions) || predictions.length === 0) {
         return;
       }
 
-      const normalized =
-        predictions
-          .map(
-            (item, index) => ({
-              className:
-                item.className !== undefined
-                  ? String(item.className)
-                  : classNames[index] ||
-                    `클래스 ${index + 1}`,
+      const normalized = predictions
+        .map((item, index) => ({
+          className:
+            item.className !== undefined
+              ? String(item.className)
+              : classNames[index] || `클래스 ${index + 1}`,
+          probability:
+            Number(item.probability) || 0
+        }))
+        .sort((a, b) => b.probability - a.probability);
 
-              probability:
-                Number(item.probability) || 0
-            })
-          )
-          .sort(
-            (a, b) =>
-              b.probability -
-              a.probability
-          );
+      const best = normalized[0];
 
-      const best =
-        normalized[0];
-
-      topPrediction.classList.remove(
-        "empty"
-      );
-
+      // 가장 높은 확률 결과
+      topPrediction.classList.remove("empty");
       topPrediction.innerHTML = "";
 
-      const label =
-        document.createElement("span");
+      const label = document.createElement("span");
+      label.className = "top-label";
+      label.textContent = best.className;
 
-      label.className =
-        "top-label";
-
-      label.textContent =
-        best.className;
-
-      const probability =
-        document.createElement("span");
-
-      probability.className =
-        "top-probability";
-
+      const probability = document.createElement("span");
+      probability.className = "top-probability";
       probability.textContent =
-        formatPercent(
-          best.probability
-        );
+        `${formatPercent(best.probability)}`;
 
-      topPrediction.appendChild(
-        label
+      topPrediction.appendChild(label);
+      topPrediction.appendChild(probability);
+
+      // 원래 클래스 순서를 유지해 화면 위치가 계속 움직이지 않도록 합니다.
+      const probabilityMap = new Map(
+        normalized.map((item) => [
+          item.className,
+          item.probability
+        ])
       );
 
-      topPrediction.appendChild(
-        probability
+      const rows = predictionList.querySelectorAll(
+        ".prediction-row"
       );
 
-      const probabilityMap =
-        new Map(
-          normalized.map(
-            (item) => [
-              item.className,
-              item.probability
-            ]
-          )
-        );
+      rows.forEach((row, index) => {
+        const className = classNames[index];
+        const probabilityValue =
+          probabilityMap.get(className) || 0;
 
-      const rows =
-        predictionList.querySelectorAll(
-          ".prediction-row"
-        );
+        const percent = probabilityValue * 100;
 
-      rows.forEach(
-        (row, index) => {
+        row.querySelector(".prediction-percent").textContent =
+          `${percent.toFixed(1)}%`;
 
-          const className =
-            classNames[index];
-
-          const probabilityValue =
-            probabilityMap.get(
-              className
-            ) || 0;
-
-          const percent =
-            probabilityValue * 100;
-
-          row.querySelector(
-            ".prediction-percent"
-          ).textContent =
-            `${percent.toFixed(1)}%`;
-
-          row.querySelector(
-            ".bar-fill"
-          ).style.width =
-            `${percent}%`;
-        }
-      );
+        row.querySelector(".bar-fill").style.width =
+          `${percent}%`;
+      });
     }
 
-    function formatPercent(
-      probability
-    ) {
-      return `${
-        (probability * 100)
-          .toFixed(1)
-      }%`;
+    function formatPercent(probability) {
+      return `${(probability * 100).toFixed(1)}%`;
     }
 
     function resetPredictions() {
+      topPrediction.className = "top-prediction empty";
+      topPrediction.textContent = "아직 예측 결과가 없습니다.";
 
-      topPrediction.className =
-        "top-prediction empty";
-
-      topPrediction.textContent =
-        "아직 예측 결과가 없습니다.";
-
-      const rows =
-        predictionList.querySelectorAll(
-          ".prediction-row"
-        );
-
-      rows.forEach(
-        (row) => {
-
-          row.querySelector(
-            ".prediction-percent"
-          ).textContent =
-            "0%";
-
-          row.querySelector(
-            ".bar-fill"
-          ).style.width =
-            "0%";
-        }
+      const rows = predictionList.querySelectorAll(
+        ".prediction-row"
       );
+
+      rows.forEach((row) => {
+        row.querySelector(".prediction-percent").textContent =
+          "0%";
+
+        row.querySelector(".bar-fill").style.width = "0%";
+      });
     }
 
     /*
@@ -1766,77 +1311,34 @@
     */
 
     function setupInterfaceByModelType() {
+      // 모두 숨긴 뒤 실제 모델에 맞는 UI만 보여줍니다.
+      cameraPanel.classList.remove("active");
+      uploadPanel.classList.remove("active");
+      audioPanel.classList.remove("active");
+      posePanel.classList.remove("active");
 
-      cameraPanel.classList.remove(
-        "active"
-      );
+      imageMethodButtons.classList.add("hidden");
 
-      uploadPanel.classList.remove(
-        "active"
-      );
+      if (modelType === MODEL_TYPES.IMAGE) {
+        imageMethodButtons.classList.remove("hidden");
+        cameraPanel.classList.add("active");
+        cameraModeButton.classList.add("button-primary");
+        uploadModeButton.classList.remove("button-primary");
+        uploadModeButton.classList.add("button-secondary");
 
-      audioPanel.classList.remove(
-        "active"
-      );
-
-      posePanel.classList.remove(
-        "active"
-      );
-
-      imageMethodButtons.classList.add(
-        "hidden"
-      );
-
-      if (
-        modelType === MODEL_TYPES.IMAGE
-      ) {
-
-        imageMethodButtons.classList.remove(
-          "hidden"
-        );
-
-        cameraPanel.classList.add(
-          "active"
-        );
-
-        cameraModeButton.classList.add(
-          "button-primary"
-        );
-
-        uploadModeButton.classList.remove(
-          "button-primary"
-        );
-
-        uploadModeButton.classList.add(
-          "button-secondary"
-        );
-
-        $("#experience-description")
-          .textContent =
+        $("#experience-description").textContent =
           "카메라 또는 사진 파일 중 하나를 선택하여 같은 방식으로 분류 결과를 확인할 수 있습니다.";
 
-      } else if (
-        modelType === MODEL_TYPES.AUDIO
-      ) {
+      } else if (modelType === MODEL_TYPES.AUDIO) {
+        audioPanel.classList.add("active");
 
-        audioPanel.classList.add(
-          "active"
-        );
-
-        $("#experience-description")
-          .textContent =
+        $("#experience-description").textContent =
           "마이크를 시작한 뒤 음성을 입력하면 실시간으로 분류 결과가 갱신됩니다.";
 
-      } else if (
-        modelType === MODEL_TYPES.POSE
-      ) {
+      } else if (modelType === MODEL_TYPES.POSE) {
+        posePanel.classList.add("active");
 
-        posePanel.classList.add(
-          "active"
-        );
-
-        $("#experience-description")
-          .textContent =
+        $("#experience-description").textContent =
           "카메라를 시작하고 화면에 몸 전체가 보이도록 자세를 취해 보세요.";
       }
     }
@@ -1847,95 +1349,51 @@
       ============================================================
     */
 
-    cameraModeButton.addEventListener(
-      "click",
-      async () => {
-
-        if (
-          modelType !== MODEL_TYPES.IMAGE ||
-          !model
-        ) {
-          return;
-        }
-
-        clearError();
-
-        await stopCamera();
-
-        clearUploadedImage();
-
-        uploadPanel.classList.remove(
-          "active"
-        );
-
-        cameraPanel.classList.add(
-          "active"
-        );
-
-        cameraModeButton.classList.remove(
-          "button-secondary"
-        );
-
-        cameraModeButton.classList.add(
-          "button-primary"
-        );
-
-        uploadModeButton.classList.remove(
-          "button-primary"
-        );
-
-        uploadModeButton.classList.add(
-          "button-secondary"
-        );
-
-        resetPredictions();
+    cameraModeButton.addEventListener("click", async () => {
+      if (modelType !== MODEL_TYPES.IMAGE || !model) {
+        return;
       }
-    );
 
-    uploadModeButton.addEventListener(
-      "click",
-      async () => {
+      clearError();
 
-        if (
-          modelType !== MODEL_TYPES.IMAGE ||
-          !model
-        ) {
-          return;
-        }
+      // 업로드 입력과 관련된 작업을 먼저 정리합니다.
+      await stopCamera();
+      clearUploadedImage();
 
-        clearError();
+      uploadPanel.classList.remove("active");
+      cameraPanel.classList.add("active");
 
-        await stopCamera();
+      cameraModeButton.classList.remove("button-secondary");
+      cameraModeButton.classList.add("button-primary");
 
-        cameraPanel.classList.remove(
-          "active"
-        );
+      uploadModeButton.classList.remove("button-primary");
+      uploadModeButton.classList.add("button-secondary");
 
-        uploadPanel.classList.add(
-          "active"
-        );
+      resetPredictions();
+    });
 
-        uploadModeButton.classList.remove(
-          "button-secondary"
-        );
-
-        uploadModeButton.classList.add(
-          "button-primary"
-        );
-
-        cameraModeButton.classList.remove(
-          "button-primary"
-        );
-
-        cameraModeButton.classList.add(
-          "button-secondary"
-        );
-
-        clearError();
-
-        resetPredictions();
+    uploadModeButton.addEventListener("click", async () => {
+      if (modelType !== MODEL_TYPES.IMAGE || !model) {
+        return;
       }
-    );
+
+      clearError();
+
+      // 카메라와 예측 반복을 먼저 종료합니다.
+      await stopCamera();
+
+      cameraPanel.classList.remove("active");
+      uploadPanel.classList.add("active");
+
+      uploadModeButton.classList.remove("button-secondary");
+      uploadModeButton.classList.add("button-primary");
+
+      cameraModeButton.classList.remove("button-primary");
+      cameraModeButton.classList.add("button-secondary");
+
+      clearError();
+      resetPredictions();
+    });
 
     /*
       ============================================================
@@ -1943,18 +1401,10 @@
       ============================================================
     */
 
-    cameraStart.addEventListener(
-      "click",
-      startImageCamera
-    );
-
-    cameraStop.addEventListener(
-      "click",
-      stopCamera
-    );
+    cameraStart.addEventListener("click", startImageCamera);
+    cameraStop.addEventListener("click", stopCamera);
 
     async function startImageCamera() {
-
       if (
         modelType !== MODEL_TYPES.IMAGE ||
         !model ||
@@ -1966,47 +1416,33 @@
       clearError();
 
       try {
-
-        webcam =
-          new tmImage.Webcam(
-            520,
-            520,
-            true
-          );
+        /*
+          tmImage.Webcam.setup()이 이 시점에 처음으로
+          카메라 권한을 요청합니다.
+        */
+        webcam = new tmImage.Webcam(520, 520, true);
 
         await webcam.setup();
 
         webcam.play();
 
-        const container =
-          $("#webcam-container");
-
+        const container = $("#webcam-container");
         container.innerHTML = "";
+        container.appendChild(webcam.canvas);
 
-        container.appendChild(
-          webcam.canvas
-        );
+        cameraStart.disabled = true;
+        cameraStop.disabled = false;
 
-        cameraStart.disabled =
-          true;
-
-        cameraStop.disabled =
-          false;
-
-        predictionRunning =
-          true;
+        predictionRunning = true;
 
         setStatus(
           "카메라가 실행되었습니다. 실시간으로 분류하고 있습니다.",
           "ready"
         );
 
-        requestAnimationFrame(
-          imageCameraLoop
-        );
+        requestAnimationFrame(imageCameraLoop);
 
       } catch (error) {
-
         console.error(error);
 
         webcam = null;
@@ -2020,30 +1456,19 @@
     }
 
     async function imageCameraLoop() {
-
-      if (
-        !webcam ||
-        !predictionRunning
-      ) {
+      if (!webcam || !predictionRunning) {
         return;
       }
 
       try {
-
         webcam.update();
 
         const prediction =
-          await model.predict(
-            webcam.canvas,
-            false
-          );
+          await model.predict(webcam.canvas, false);
 
-        renderPredictions(
-          prediction
-        );
+        renderPredictions(prediction);
 
       } catch (error) {
-
         console.error(error);
 
         await stopCamera();
@@ -2055,44 +1480,28 @@
         return;
       }
 
-      if (
-        webcam &&
-        predictionRunning
-      ) {
-
-        requestAnimationFrame(
-          imageCameraLoop
-        );
+      if (webcam && predictionRunning) {
+        requestAnimationFrame(imageCameraLoop);
       }
     }
 
     async function stopCamera() {
-
-      predictionRunning =
-        false;
+      predictionRunning = false;
 
       if (webcam) {
-
         try {
           webcam.stop();
         } catch (error) {
-          console.warn(
-            "웹캠 중지 과정:",
-            error
-          );
+          console.warn("웹캠 중지 과정:", error);
         }
 
         webcam = null;
       }
 
-      $("#webcam-container")
-        .innerHTML = "";
+      $("#webcam-container").innerHTML = "";
 
-      cameraStart.disabled =
-        false;
-
-      cameraStop.disabled =
-        true;
+      cameraStart.disabled = false;
+      cameraStop.disabled = true;
     }
 
     /*
@@ -2101,32 +1510,20 @@
       ============================================================
     */
 
-    imageFile.addEventListener(
-      "change",
-      handleImageFile
-    );
+    imageFile.addEventListener("change", handleImageFile);
 
-    async function handleImageFile(
-      event
-    ) {
-
+    async function handleImageFile(event) {
       clearError();
 
-      const file =
-        event.target.files &&
+      const file = event.target.files &&
         event.target.files[0];
 
       if (!file) {
         return;
       }
 
-      if (
-        !file.type ||
-        !file.type.startsWith(
-          "image/"
-        )
-      ) {
-
+      // 브라우저가 이미지 MIME 타입으로 인식하지 못하는 파일 차단
+      if (!file.type || !file.type.startsWith("image/")) {
         clearUploadedImage();
 
         showError(
@@ -2137,43 +1534,31 @@
       }
 
       try {
-
+        /*
+          새 파일을 선택하기 전에 이전 Object URL을 정리합니다.
+        */
         revokeCurrentObjectUrl();
 
-        currentObjectUrl =
-          URL.createObjectURL(
-            file
-          );
+        currentObjectUrl = URL.createObjectURL(file);
 
-        uploadedImage.src =
-          currentObjectUrl;
+        uploadedImage.src = currentObjectUrl;
 
-        await waitForImageLoad(
-          uploadedImage
-        );
+        await waitForImageLoad(uploadedImage);
 
-        uploadedImage.style.display =
-          "block";
-
-        uploadPlaceholder.classList.add(
-          "hidden"
-        );
+        uploadedImage.style.display = "block";
+        uploadPlaceholder.classList.add("hidden");
 
         fileName.textContent =
           `선택한 파일: ${file.name}`;
 
-        uploadPredict.disabled =
-          false;
-
-        uploadClear.disabled =
-          false;
+        uploadPredict.disabled = false;
+        uploadClear.disabled = false;
 
         clearError();
 
         resetPredictions();
 
       } catch (error) {
-
         console.error(error);
 
         clearUploadedImage();
@@ -2185,92 +1570,55 @@
       }
     }
 
-    function waitForImageLoad(
-      image
-    ) {
+    function waitForImageLoad(image) {
+      return new Promise((resolve, reject) => {
+        const cleanup = () => {
+          image.removeEventListener("load", handleLoad);
+          image.removeEventListener("error", handleError);
+        };
 
-      return new Promise(
-        (resolve, reject) => {
+        const handleLoad = () => {
+          cleanup();
 
-          const cleanup = () => {
-
-            image.removeEventListener(
-              "load",
-              handleLoad
-            );
-
-            image.removeEventListener(
-              "error",
-              handleError
-            );
-          };
-
-          const handleLoad = () => {
-
-            cleanup();
-
-            if (
-              image.naturalWidth <= 0 ||
-              image.naturalHeight <= 0
-            ) {
-
-              reject(
-                new Error(
-                  "이미지 크기를 확인할 수 없습니다."
-                )
-              );
-
-              return;
-            }
-
-            resolve();
-          };
-
-          const handleError = () => {
-
-            cleanup();
-
+          if (
+            image.naturalWidth <= 0 ||
+            image.naturalHeight <= 0
+          ) {
             reject(
-              new Error(
-                "이미지를 읽을 수 없습니다."
-              )
+              new Error("이미지 크기를 확인할 수 없습니다.")
             );
-          };
+            return;
+          }
 
-          image.addEventListener(
-            "load",
-            handleLoad,
-            {
-              once: true
-            }
-          );
+          resolve();
+        };
 
-          image.addEventListener(
-            "error",
-            handleError,
-            {
-              once: true
-            }
+        const handleError = () => {
+          cleanup();
+          reject(
+            new Error("이미지를 읽을 수 없습니다.")
           );
-        }
-      );
+        };
+
+        image.addEventListener("load", handleLoad, {
+          once: true
+        });
+
+        image.addEventListener("error", handleError, {
+          once: true
+        });
+      });
     }
 
-    uploadPredict.addEventListener(
-      "click",
-      predictUploadedImage
-    );
+    uploadPredict.addEventListener("click", predictUploadedImage);
 
     async function predictUploadedImage() {
-
       if (
         modelType !== MODEL_TYPES.IMAGE ||
         !model ||
-        uploadedImage.style.display ===
-          "none" ||
+        uploadedImage.style.display === "none" ||
         !uploadedImage.src
       ) {
-
         showError(
           "먼저 정상적인 이미지 파일을 선택해 주세요."
         );
@@ -2281,19 +1629,15 @@
       clearError();
 
       try {
-
+        /*
+          요구사항에 따라 HTML img 요소를 직접 model.predict()에 전달합니다.
+        */
         const prediction =
-          await model.predict(
-            uploadedImage,
-            false
-          );
+          await model.predict(uploadedImage, false);
 
-        renderPredictions(
-          prediction
-        );
+        renderPredictions(prediction);
 
       } catch (error) {
-
         console.error(error);
 
         showError(
@@ -2302,52 +1646,30 @@
       }
     }
 
-    uploadClear.addEventListener(
-      "click",
-      () => {
-
-        clearUploadedImage();
-
-        resetPredictions();
-
-        clearError();
-      }
-    );
+    uploadClear.addEventListener("click", () => {
+      clearUploadedImage();
+      resetPredictions();
+      clearError();
+    });
 
     function clearUploadedImage() {
-
       imageFile.value = "";
 
-      uploadedImage.removeAttribute(
-        "src"
-      );
+      uploadedImage.removeAttribute("src");
+      uploadedImage.style.display = "none";
 
-      uploadedImage.style.display =
-        "none";
-
-      uploadPlaceholder.classList.remove(
-        "hidden"
-      );
-
+      uploadPlaceholder.classList.remove("hidden");
       fileName.textContent = "";
 
-      uploadPredict.disabled =
-        true;
-
-      uploadClear.disabled =
-        true;
+      uploadPredict.disabled = true;
+      uploadClear.disabled = true;
 
       revokeCurrentObjectUrl();
     }
 
     function revokeCurrentObjectUrl() {
-
       if (currentObjectUrl) {
-
-        URL.revokeObjectURL(
-          currentObjectUrl
-        );
-
+        URL.revokeObjectURL(currentObjectUrl);
         currentObjectUrl = null;
       }
     }
@@ -2358,18 +1680,10 @@
       ============================================================
     */
 
-    audioStart.addEventListener(
-      "click",
-      startAudio
-    );
-
-    audioStop.addEventListener(
-      "click",
-      stopAudio
-    );
+    audioStart.addEventListener("click", startAudio);
+    audioStop.addEventListener("click", stopAudio);
 
     async function startAudio() {
-
       if (
         modelType !== MODEL_TYPES.AUDIO ||
         !audioRecognizer ||
@@ -2381,36 +1695,32 @@
       clearError();
 
       try {
-
+        /*
+          listen() 호출 시점에 마이크 권한을 요청합니다.
+          페이지가 열렸을 때 자동으로 마이크를 실행하지 않습니다.
+        */
         audioRunning = true;
 
         audioRecognizer.listen(
           (result) => {
-
             if (!audioRunning) {
               return;
             }
 
-            const scores =
-              Array.from(
-                result.scores
-              );
-
-            const predictions =
-              scores.map(
-                (probability, index) => ({
-                  className:
-                    classNames[index] ||
-                    `클래스 ${index + 1}`,
-
-                  probability:
-                    Number(probability)
-                })
-              );
-
-            renderPredictions(
-              predictions
+            const scores = Array.from(
+              result.scores
             );
+
+            const predictions = scores.map(
+              (probability, index) => ({
+                className:
+                  classNames[index] ||
+                  `클래스 ${index + 1}`,
+                probability: Number(probability)
+              })
+            );
+
+            renderPredictions(predictions);
 
             audioState.textContent =
               "음성을 듣고 있습니다. 말하거나 소리를 입력해 보세요.";
@@ -2423,11 +1733,8 @@
           }
         );
 
-        audioStart.disabled =
-          true;
-
-        audioStop.disabled =
-          false;
+        audioStart.disabled = true;
+        audioStop.disabled = false;
 
         audioState.textContent =
           "음성을 듣고 있습니다. 말하거나 소리를 입력해 보세요.";
@@ -2438,11 +1745,9 @@
         );
 
       } catch (error) {
-
         console.error(error);
 
-        audioRunning =
-          false;
+        audioRunning = false;
 
         showError(
           "마이크를 시작할 수 없습니다. " +
@@ -2453,40 +1758,24 @@
         audioState.textContent =
           "마이크를 사용할 수 없습니다.";
 
-        audioStart.disabled =
-          false;
-
-        audioStop.disabled =
-          true;
+        audioStart.disabled = false;
+        audioStop.disabled = true;
       }
     }
 
     async function stopAudio() {
-
-      audioRunning =
-        false;
+      audioRunning = false;
 
       if (audioRecognizer) {
-
         try {
-
-          audioRecognizer
-            .stopListening();
-
+          audioRecognizer.stopListening();
         } catch (error) {
-
-          console.warn(
-            "오디오 중지 과정:",
-            error
-          );
+          console.warn("오디오 중지 과정:", error);
         }
       }
 
-      audioStart.disabled =
-        false;
-
-      audioStop.disabled =
-        true;
+      audioStart.disabled = false;
+      audioStop.disabled = true;
 
       audioState.textContent =
         "마이크가 중지되었습니다.";
@@ -2500,18 +1789,10 @@
       ============================================================
     */
 
-    poseStart.addEventListener(
-      "click",
-      startPoseCamera
-    );
-
-    poseStop.addEventListener(
-      "click",
-      stopPoseCamera
-    );
+    poseStart.addEventListener("click", startPoseCamera);
+    poseStop.addEventListener("click", stopPoseCamera);
 
     async function startPoseCamera() {
-
       if (
         modelType !== MODEL_TYPES.POSE ||
         !model ||
@@ -2523,41 +1804,32 @@
       clearError();
 
       try {
-
         const canvas =
           $("#pose-canvas-main");
 
+        /*
+          tmPose.Webcam.setup()이 여기서 카메라 권한을 요청합니다.
+        */
         poseWebcam =
-          new tmPose.Webcam(
-            400,
-            400,
-            true
-          );
+          new tmPose.Webcam(400, 400, true);
 
         await poseWebcam.setup();
 
         poseWebcam.play();
 
-        poseStart.disabled =
-          true;
+        poseStart.disabled = true;
+        poseStop.disabled = false;
 
-        poseStop.disabled =
-          false;
-
-        predictionRunning =
-          true;
+        predictionRunning = true;
 
         setStatus(
           "카메라가 실행되었습니다. 포즈를 인식하고 있습니다.",
           "ready"
         );
 
-        requestAnimationFrame(
-          poseLoop
-        );
+        requestAnimationFrame(poseLoop);
 
       } catch (error) {
-
         console.error(error);
 
         poseWebcam = null;
@@ -2570,25 +1842,18 @@
     }
 
     async function poseLoop() {
-
-      if (
-        !poseWebcam ||
-        !predictionRunning
-      ) {
+      if (!poseWebcam || !predictionRunning) {
         return;
       }
 
       try {
-
         poseWebcam.update();
 
         const canvas =
           $("#pose-canvas-main");
 
         const ctx =
-          canvas.getContext(
-            "2d"
-          );
+          canvas.getContext("2d");
 
         ctx.clearRect(
           0,
@@ -2597,13 +1862,15 @@
           canvas.height
         );
 
+        /*
+          포즈 모델은 먼저 pose와 포즈 분류 결과를 얻습니다.
+        */
         const {
           pose,
           posenetOutput
-        } =
-          await model.estimatePose(
-            poseWebcam.canvas
-          );
+        } = await model.estimatePose(
+          poseWebcam.canvas
+        );
 
         const prediction =
           await model.predict(
@@ -2611,6 +1878,9 @@
             posenetOutput
           );
 
+        /*
+          카메라 화면을 캔버스에 표시합니다.
+        */
         ctx.drawImage(
           poseWebcam.canvas,
           0,
@@ -2619,8 +1889,10 @@
           canvas.height
         );
 
+        /*
+          포즈 모델의 관절과 연결선을 화면에 표시합니다.
+        */
         if (pose) {
-
           tmPose.drawKeypoints(
             pose.keypoints,
             0.5,
@@ -2634,12 +1906,9 @@
           );
         }
 
-        renderPredictions(
-          prediction
-        );
+        renderPredictions(prediction);
 
       } catch (error) {
-
         console.error(error);
 
         await stopPoseCamera();
@@ -2651,34 +1920,19 @@
         return;
       }
 
-      if (
-        poseWebcam &&
-        predictionRunning
-      ) {
-
-        requestAnimationFrame(
-          poseLoop
-        );
+      if (poseWebcam && predictionRunning) {
+        requestAnimationFrame(poseLoop);
       }
     }
 
     async function stopPoseCamera() {
-
-      predictionRunning =
-        false;
+      predictionRunning = false;
 
       if (poseWebcam) {
-
         try {
-
           poseWebcam.stop();
-
         } catch (error) {
-
-          console.warn(
-            "포즈 카메라 중지 과정:",
-            error
-          );
+          console.warn("포즈 카메라 중지 과정:", error);
         }
 
         poseWebcam = null;
@@ -2688,9 +1942,7 @@
         $("#pose-canvas-main");
 
       const ctx =
-        canvas.getContext(
-          "2d"
-        );
+        canvas.getContext("2d");
 
       ctx.clearRect(
         0,
@@ -2699,11 +1951,8 @@
         canvas.height
       );
 
-      poseStart.disabled =
-        false;
-
-      poseStop.disabled =
-        true;
+      poseStart.disabled = false;
+      poseStop.disabled = true;
     }
 
     /*
@@ -2713,24 +1962,17 @@
     */
 
     async function stopAllInputs() {
-
-      predictionRunning =
-        false;
+      predictionRunning = false;
 
       await stopCamera();
-
       await stopPoseCamera();
-
       await stopAudio();
 
+      // 일반 MediaStream도 혹시 남아 있으면 모든 트랙을 종료합니다.
       if (mediaStream) {
-
-        mediaStream
-          .getTracks()
-          .forEach(
-            (track) =>
-              track.stop()
-          );
+        mediaStream.getTracks().forEach(
+          (track) => track.stop()
+        );
 
         mediaStream = null;
       }
@@ -2738,64 +1980,46 @@
 
     /*
       ============================================================
-      페이지 종료 시 정리
+      페이지 종료 시 카메라 / 마이크 / Object URL 정리
       ============================================================
     */
 
-    window.addEventListener(
-      "beforeunload",
-      () => {
+    window.addEventListener("beforeunload", () => {
+      predictionRunning = false;
+      audioRunning = false;
 
-        predictionRunning =
-          false;
-
-        audioRunning =
-          false;
-
-        if (webcam) {
-
-          try {
-            webcam.stop();
-          } catch (error) {
-            console.warn(error);
-          }
+      if (webcam) {
+        try {
+          webcam.stop();
+        } catch (error) {
+          console.warn(error);
         }
-
-        if (poseWebcam) {
-
-          try {
-            poseWebcam.stop();
-          } catch (error) {
-            console.warn(error);
-          }
-        }
-
-        if (audioRecognizer) {
-
-          try {
-
-            audioRecognizer
-              .stopListening();
-
-          } catch (error) {
-
-            console.warn(error);
-          }
-        }
-
-        if (mediaStream) {
-
-          mediaStream
-            .getTracks()
-            .forEach(
-              (track) =>
-                track.stop()
-            );
-        }
-
-        revokeCurrentObjectUrl();
       }
-    );
+
+      if (poseWebcam) {
+        try {
+          poseWebcam.stop();
+        } catch (error) {
+          console.warn(error);
+        }
+      }
+
+      if (audioRecognizer) {
+        try {
+          audioRecognizer.stopListening();
+        } catch (error) {
+          console.warn(error);
+        }
+      }
+
+      if (mediaStream) {
+        mediaStream.getTracks().forEach(
+          (track) => track.stop()
+        );
+      }
+
+      revokeCurrentObjectUrl();
+    });
 
     /*
       ============================================================
@@ -2803,6 +2027,7 @@
       ============================================================
     */
 
+    // 페이지가 열릴 때는 모델만 준비하고 카메라/마이크는 실행하지 않습니다.
     document.addEventListener(
       "DOMContentLoaded",
       loadModel
